@@ -1,0 +1,626 @@
+%% LyX 2.4.2.1 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt,twoside,estonian,english]{report}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{color}
+\usepackage{babel}
+\makeatletter
+\addto\extrasestonian{\bbl@deactivate{~}}
+
+\makeatother
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[b5paper]{geometry}
+\geometry{verbose,tmargin=22.5mm,bmargin=22.5mm,lmargin=26mm,rmargin=23mm}
+\usepackage{setspace}
+\usepackage{nomencl}
+\makenomenclature
+\usepackage[pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false]
+ {hyperref}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newlength{\lyxlabelwidth}      % auxiliary length 
+
+\@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% Definitions, theorems, remarks
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+
+% Examples
+\newcounter{example}[chapter]
+\newcommand{\example}{\medskip{}\noindent\refstepcounter{example}{\bf Example \thechapter.\arabic{example} }}
+\renewcommand{\theexample}{\thechapter.\arabic{example}}
+
+% Define proof environment
+\newenvironment{proof}{\noindent\textbf{Proof: }}{$\hfill\blacksquare$}
+
+\usepackage[nocompress]{cite}
+\usepackage{algpseudocode}
+
+\usepackage[font={footnotesize}]{caption}
+
+% Equation reference
+\usepackage{refstyle}
+\newref{eq}{refcmd={\textup{\tagform@{\ref{#1}}}}}
+
+% Brackets upright
+\def\citeleft{\begingroup\rm[}
+\def\citeright{]\endgroup}
+
+% MATLAB syntax highlighting
+\usepackage{matlab-prettifier}
+
+% New color definition for listings
+\definecolor{light-gray}{gray}{0.975}
+
+% Nomenclature
+\renewcommand\nomname{List of Abbreviations}
+\def\nompreamble{\addcontentsline{toc}{chapter}{\nomname}}
+\renewcommand{\nomlabel}[1]{{\bf #1}}
+
+% Suppress title generation
+\renewcommand\maketitle{}
+
+% Title page margin adjustment
+\usepackage{changepage}
+
+% Remove empty page numbers
+\usepackage{emptypage}
+
+% Clear to left page
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+% Epigraph
+\usepackage{epigraph} % Epigraph settings
+\setlength{\epigraphwidth}{.42\textwidth}
+\setlength{\epigraphrule}{0pt}
+\setlength{\beforeepigraphskip}{1em}
+\setlength{\afterepigraphskip}{1em}
+
+\makeatother
+
+\usepackage{listings}
+\lstset{backgroundcolor={\color{light-gray}},
+frame=tb,
+framerule=0pt,
+emph={oustapid,doustafod,d2sos,dcgain,margin,fotf,fsparam,fid,pfid,fidata,fpid_optimize,fpopt,fracpid,logspace,frac_rcl,zpk,prefnum,engnum,zscale,iopid_tune},
+emphstyle={\color{blue}}}
+\addto\captionsenglish{%
+	\def\eqdeclaration#1{, see equation\nobreakspace(#1)}%
+	\def\pagedeclaration#1{, page\nobreakspace#1}%
+	\def\nomname{Nomenclature}%
+}
+\addto\captionsestonian{%
+	\def\eqdeclaration#1{, see equation\nobreakspace(#1)}%
+	\def\pagedeclaration#1{, page\nobreakspace#1}%
+	\def\nomname{Nomenclature}%
+}
+\def\eqdeclaration#1{, see equation\nobreakspace(#1)}
+\def\pagedeclaration#1{, page\nobreakspace#1}
+\def\nomname{Nomenclature}
+
+\begin{document}
+\begin{adjustwidth}{-7mm}{}
+\thispagestyle{empty}
+\pagenumbering{gobble}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+\hspace{1cm}\includegraphics[width=0.33\columnwidth]{img/taltech}
+\par\end{center}%
+\end{minipage}\vfill{}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{doublespace}
+\begin{center}
+{\LARGE\textbf{My Cool PhD Thesis Title}}
+\par\end{center}
+\end{doublespace}
+%
+\end{minipage}\vspace{1.5cm}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+{\Large JOHN DOE}
+\par\end{center}%
+\end{minipage}\vfill{}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+{\large TALLINN 2016}
+\par\end{center}%
+\end{minipage}\end{adjustwidth}
+
+\clearpage{}
+
+\pagenumbering{arabic}
+\thispagestyle{empty}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+{\large THESIS ON INFORMATICS AND SYSTEM ENGINEERING C$nnn$}
+\par\end{center}%
+\end{minipage}
+
+\begin{singlespace}
+\begin{center}
+\vfill{}
+\par\end{center}
+\end{singlespace}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{doublespace}
+\begin{center}
+{\LARGE\textbf{My Cool PhD Thesis Title}}
+\par\end{center}
+\end{doublespace}
+%
+\end{minipage}
+
+\begin{singlespace}
+\begin{center}
+\vspace{1.5cm}
+\par\end{center}
+\end{singlespace}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+{\Large JOHN DOE}
+\par\end{center}%
+\end{minipage}
+
+\begin{singlespace}
+\begin{center}
+\vfill{}
+\par\end{center}
+\end{singlespace}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+\includegraphics[width=0.15\columnwidth]{img/tut_press}
+\par\end{center}%
+\end{minipage}\clearpage{}
+
+\begin{adjustwidth}{-6.5mm}{}
+\thispagestyle{empty}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+TALLINN UNIVERSITY OF TECHNOLOGY\\
+Faculty of Information Technology\\
+Department of Computer Control
+\par\end{center}%
+\end{minipage}
+
+\begin{singlespace}
+\begin{center}
+\vfill{}
+\par\end{center}
+\end{singlespace}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\textbf{Dissertation was accepted for the defence of the degree of
+Doctor of Philosophy in Informatics and System Engineering on Month~Day,~2016.}%
+\end{minipage}
+
+\vfill{}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+\begin{tabular}{>{\raggedright}p{0.2\columnwidth}p{0.75\columnwidth}}
+\textbf{Supervisors:} & Ph.D., Associate Professor Who Ever, Department of Computer Control,
+Tallinn University of Technology\newline
+\newline
+Ph.D., Associate Professor Mei Supp, Department of Computer Control,
+Tallinn University of Technology\newline
+\tabularnewline
+\textbf{Opponents:} & D.Sc., Professor Henry Smartman, Faculty of Exceptional Technologies,
+Technical University of Ablansk, Albansk, ThatCountry\newline
+\newline
+Ph.D., Aleksandr Gruzd, Faculty of CHGK Science, Moskow University,
+Moscow, ThatOtherCountry\tabularnewline
+\end{tabular}
+\par\end{center}%
+\end{minipage}
+
+\vfill{}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{flushleft}
+Defence of the thesis: Month Day, Year
+\par\end{flushleft}%
+\end{minipage}
+
+\vfill{}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+Declaration:\\
+\emph{Hereby I declare that this doctoral thesis, my original investigation
+and achievement, submitted for the doctoral degree at Tallinn University
+of Technology has not been submitted for any academic degree.}
+
+\vspace{1cm}
+
+\emph{/John Doe/}%
+\end{minipage}
+
+\vfill{}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\emph{\includegraphics[width=0.3\columnwidth]{img/EU_logos}}%
+\end{minipage}
+
+\vfill{}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+Copyright: John Doe, 2016
+
+ISSN $nnnn$-$nnnn$
+
+ISBN $nnn$-$nnnn$-$nn$-$nnn$-$n$ (publication)
+
+ISBN $nnn$-$nnnn$-$nn$-$nnn$-$n$ (PDF)%
+\end{minipage}
+
+\end{adjustwidth}\newpage{}
+
+\thispagestyle{empty}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\selectlanguage{estonian}%
+\begin{center}
+{\large INFORMAATIKA JA SÜSTEEMITEHNIKA C$nnn$}
+\par\end{center}%
+\end{minipage}
+
+\begin{singlespace}
+\begin{center}
+\vfill{}
+\par\end{center}
+\end{singlespace}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\selectlanguage{estonian}%
+\begin{doublespace}
+\begin{center}
+{\LARGE\textbf{Minu lahe PhD diplomi nimetus}}
+\par\end{center}
+\end{doublespace}
+%
+\end{minipage}
+
+\begin{singlespace}
+\begin{center}
+\vspace{1.5cm}
+\par\end{center}
+\end{singlespace}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+{\Large JOHN DOE}
+\par\end{center}%
+\end{minipage}
+
+\begin{singlespace}
+\begin{center}
+\vfill{}
+\par\end{center}
+\end{singlespace}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+\includegraphics[width=0.15\columnwidth]{img/ttu_kirjastus}
+\par\end{center}%
+\end{minipage}\cleardoublepage{}
+
+\global\long\def\sinf#1{\sin\left({\textstyle \frac{#1\pi}{2}}\right)}%
+\global\long\def\cosf#1{\cos\left({\textstyle \frac{#1\pi}{2}}\right)}%
+
+\global\long\def\euler{\mathrm{e}}%
+\global\long\def\dif{\mathrm{d}}%
+\global\long\def\erf{\mathrm{erf}}%
+
+\tableofcontents{}\cleardoublepage{}
+
+\chapter*{List of Publications\addcontentsline{toc}{chapter}{List of Publications}}
+\begin{enumerate}[label=P\arabic{*}.,ref=P\arabic{*}]
+\item \label{enu:P1}J. Doe, \textquotedbl My Cool Publication,\textquotedbl{}
+International Journal of Whatever, vol.~5, no. 5, pp. 10--30, 2011.
+\item \label{enu:P2}J. Doe, W. Ever, \textquotedbl Design of a really
+cool thing,\textquotedbl{} in Proc. of the 2013 Jmerican Control Conference
+(JCC), Bashington DC, USJ, June 2013, pp. 9000--9003.
+\item \label{enu:P3}J. Doe, M. Supp, \textquotedbl Efficient implementations
+of things,\textquotedbl{} in Proc. of the 14th International Control
+Conference (ICC), 2014, pp. 907--910.
+\end{enumerate}
+
+\section*{Author's Contribution to the Publications}
+
+All results in {[}\ref{enu:P1}{]}--{[}\ref{enu:P3}{]} were obtained
+by the author of the thesis under the supervision of Dr. Who Ever
+and Dr. Mei Supp.
+
+In {[}\ref{enu:P1}{]} the ...
+
+The contribution of the author of the thesis in {[}\ref{enu:P2}{]}
+lies in ...
+
+The problem of implementation of ... {[}\ref{enu:P3}{]}. 
+
+\cleardoublepage{}
+
+\printnomenclature[0.3\columnwidth]\cleardoublepage{}
+
+\include{Ch1-Introduction}\cleardoublepage{}
+
+\include{Ch2-Preliminaries}\cleardoublepage{}
+
+\include{Ch3-Content}\cleardoublepage{}
+
+\include{Ch4-Conclusions}\cleardoublepage{}
+
+\bibliographystyle{IEEEtranS}
+\phantomsection\addcontentsline{toc}{chapter}{\bibname}\bibliography{IEEEfull,AutomaticControl}
+\cleardoublepage{}
+
+\chapter*{Acknowledgments\addcontentsline{toc}{chapter}{Acknowledgments}}
+
+The author wishes to express his deep gratitude to his supervisors
+...
+
+\cleardoublepage{}
+\selectlanguage{estonian}%
+
+\chapter*{Kokkuvõte\foreignlanguage{english}{\addcontentsline{toc}{chapter}{Kokkuvõte}}}
+
+Kookuvõte eesti keeles.
+
+\selectlanguage{english}%
+\cleardoublepage{}
+
+\chapter*{Abstract\addcontentsline{toc}{chapter}{Abstract}}
+
+The present thesis is devoted to...
+
+\cleardoublepage{}
+\selectlanguage{estonian}%
+
+\chapter*{Elulookirjeldus\foreignlanguage{english}{\addcontentsline{toc}{chapter}{Elulookirjeldus}}}
+\begin{enumerate}
+\item Isikuandmed\medskip{}
+\\
+\begin{tabular*}{1\columnwidth}{@{\extracolsep{\fill}}>{\raggedright}p{0.4\columnwidth}>{\raggedright}p{0.55\columnwidth}}
+\noalign{\vskip\doublerulesep}
+\quad{}Ees- ja perekonnanimi & John Doe\tabularnewline[\doublerulesep]
+\noalign{\vskip\doublerulesep}
+\quad{}Sünniaeg ja -koht & 01.01.2001, Tallinn, Eesti\tabularnewline[\doublerulesep]
+\noalign{\vskip\doublerulesep}
+\quad{}Kodakondsus & Eesti\tabularnewline[\doublerulesep]
+\noalign{\vskip\doublerulesep}
+\quad{}E-posti aadress & mail@example.com\tabularnewline[\doublerulesep]
+\end{tabular*}
+\item Hariduskäik
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.32\columnwidth}|>{\raggedright}p{0.17\columnwidth}|>{\raggedright}p{0.33\columnwidth}|}
+\hline 
+\textbf{Õppeasutus (nimetus lõpetamise ajal) } & \textbf{Lõpetamise aeg} & \textbf{Haridus (eriala/kraad) }\tabularnewline
+\hline 
+Tallinna Tehnikaülikool & 2009 & Arvuti- ja süsteemitehnika, B.Sc.\tabularnewline
+\hline 
+Tallinna Tehnikaülikool & 2011 & Arvuti- ja süsteemitehnika, M.Sc., Cum Laude\tabularnewline
+\hline 
+\end{tabular*}
+\begin{enumerate}
+\item [3.]Keelteoskus (alg-, kesk- või kõrgtase)
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.42\columnwidth}|>{\raggedright}p{0.41\columnwidth}|}
+\hline 
+\textbf{Keel} & \textbf{Tase}\tabularnewline
+\hline 
+Eesti & kõrgtase\tabularnewline
+\hline 
+Inglise & kõrgtase\tabularnewline
+\hline 
+Vene & emakeel\tabularnewline
+\hline 
+\foreignlanguage{english}{} & \foreignlanguage{english}{}\tabularnewline
+\hline 
+\foreignlanguage{english}{} & \foreignlanguage{english}{}\tabularnewline
+\hline 
+\end{tabular*}
+\begin{enumerate}
+\item [4.]Teenistuskäik
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.17\columnwidth}|>{\raggedright}p{0.45\columnwidth}|>{\raggedright}p{0.2\columnwidth}|}
+\hline 
+\textbf{Töötamise aeg} & \textbf{Tööandja nimetus} & \textbf{Ametikoht}\tabularnewline
+\hline 
+2011 -- ... & Automaatikainstituut, TTÜ & Insener\tabularnewline
+\hline 
+\end{tabular*}
+\begin{enumerate}
+\item [5.]Projektid\nopagebreak
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.2\columnwidth}|>{\raggedright}p{0.63\columnwidth}|}
+\hline 
+\textbf{Projekt} & \textbf{Kirjeldus}\tabularnewline
+\hline 
+MyCoolProject & \foreignlanguage{english}{Vahva projekti arendaja}\tabularnewline
+\hline 
+\end{tabular*}
+\begin{enumerate}
+\item [6.]Teadustegevus\medskip{}
+\\
+Ajakirja- ja konverentsiartiklite loetelu on toodud ingliskeelse CV
+juures.
+\item [7.]Patenteeritud leiutised\medskip{}
+\\
+J. Doe, \textquotedblleft Väga hea asi,\textquotedblright{} Eesti
+patent P999 111 222, 2015, pat. menetluses.
+\item [8.]Kaitstud lõputööd\medskip{}
+\\
+\emph{Minu bakatöö}, B.Sc., Tallinna Tehnikaülikool, 2009.\smallskip{}
+\\
+\emph{Minu magistritöö}, M.Sc., Tallinna Tehnikaülikool, 2011.
+\item [9.]Teadustöö põhisuunad\medskip{}
+\\
+Äge mat. analüüs, mittelineaarsete süsteemide projekteerimine.\foreignlanguage{english}{\cleardoublepage}
+\end{enumerate}
+\selectlanguage{english}%
+
+\chapter*{Curriculum Vitae\addcontentsline{toc}{chapter}{Curriculum Vitae}}
+\begin{enumerate}
+\item Personal Data\medskip{}
+\\
+\begin{tabular*}{1\columnwidth}{@{\extracolsep{\fill}}>{\raggedright}p{0.4\columnwidth}>{\raggedright}p{0.55\columnwidth}}
+\noalign{\vskip\doublerulesep}
+\quad{}Name & John Doe\tabularnewline[\doublerulesep]
+\noalign{\vskip\doublerulesep}
+\quad{}Date and place of birth & 01.01.2001, Tallinn, Estonia\tabularnewline[\doublerulesep]
+\noalign{\vskip\doublerulesep}
+\quad{}E-mail address & mail@example.com\tabularnewline[\doublerulesep]
+\end{tabular*}
+\item Education
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.32\columnwidth}|>{\raggedright}p{0.17\columnwidth}|>{\raggedright}p{0.33\columnwidth}|}
+\hline 
+\textbf{Educational institution } & \textbf{Graduation year} & \textbf{Education (field of study/degree) }\tabularnewline
+\hline 
+Tallinn University of Technology & 2009 & Computer and Systems Engineering, B.Sc.\tabularnewline
+\hline 
+Tallinn University of Technology & 2011 & Computer and Systems Engineering, M.Sc., Cum Laude\tabularnewline
+\hline 
+\end{tabular*}
+\begin{enumerate}
+\item [3.]Language competence/skills (fluent, average, basic skills)
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.42\columnwidth}|>{\raggedright}p{0.41\columnwidth}|}
+\hline 
+\textbf{Language} & \textbf{Level}\tabularnewline
+\hline 
+Estonian & fluent\tabularnewline
+\hline 
+English & fluent\tabularnewline
+\hline 
+Russian & native\tabularnewline
+\hline 
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+\hline 
+\end{tabular*}
+\begin{enumerate}
+\item [4.]Professional employment
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.17\columnwidth}|>{\raggedright}p{0.45\columnwidth}|>{\raggedright}p{0.2\columnwidth}|}
+\hline 
+\textbf{Period} & \textbf{Organization} & \textbf{Position}\tabularnewline
+\hline 
+2011 -- ... & Department of Computer Control, TUT & Engineer\tabularnewline
+\hline 
+\end{tabular*}
+\begin{enumerate}
+\item [5.]Projects
+\end{enumerate}
+\hfill{}%
+\begin{tabular*}{0.92\columnwidth}{@{\extracolsep{\fill}}|>{\raggedright}p{0.2\columnwidth}|>{\raggedright}p{0.63\columnwidth}|}
+\hline 
+\textbf{Project} & \textbf{Description}\tabularnewline
+\hline 
+MyCoolProject & Main developer\tabularnewline
+\hline 
+\end{tabular*}
+
+\clearpage{}
+\begin{enumerate}
+\item [6.]Scientific work
+
+\begin{enumerate}
+\item [1.]First publication
+\item [2.]Second publication
+\item [3.]Etc
+\end{enumerate}
+\end{enumerate}
+\clearpage{}
+\begin{enumerate}
+\item [7.]Patented inventions\medskip{}
+\\
+J. Doe, \textquotedblleft Very good thing,\textquotedblright{} Estonian
+patent P999 111 222, 2015, pat. pending.
+\item [8.]Defended theses\medskip{}
+\\
+\emph{My BSc}, B.Sc., Tallinn University of Technology, 2009.\smallskip{}
+\\
+\emph{My MSc}, M.Sc., Tallinn University of Technology, 2011.
+\item [9.]Main areas of scientific work\medskip{}
+\\
+Cutting edge mathematical analysis, design of nonlinear systems.
+\end{enumerate}
+
+\chapter*{Publications\addcontentsline{toc}{chapter}{Publications}}
+
+\thispagestyle{empty}
+
+\cleardoublepage{}
+
+\section*{Publication 1}
+
+\thispagestyle{empty}
+
+\vspace{0.05\textheight}
+
+
+\subsection*{Reference}
+
+J. Doe, \textquotedbl My Cool Publication,\textquotedbl{} International
+Journal of Whatever, vol. 5, no. 5, pp. 10--30, 2011.
+
+\subsection*{Abstract}
+
+My Cool Publication is about ... (like in the paper)
+
+\cleardoublepage{}
+
+Use \emph{Insert}$\rightarrow$\emph{File}$\rightarrow$\emph{External
+material...} to insert your paper PDF file here---should contain
+the IEEE copyright. Then choose the 'PDF pages' template and in the
+options type 'pages=-'.
+
+\cleardoublepage{}
+
+\section*{Publication 2}
+
+\thispagestyle{empty}
+
+\vspace{0.05\textheight}
+
+
+\subsection*{Reference}
+
+Bibliographical entry
+
+\subsection*{Abstract}
+
+In this paper, we investigate ...
+
+\cleardoublepage{}
+
+Inserted PDF file
+\end{document}
